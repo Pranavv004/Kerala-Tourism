@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Kerala Tourism Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+        .login {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login__bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;/*No scroll*/
+            object-fit: cover;
+        }
+
+        .login__form {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            padding: 3.8rem 1rem;/*rem is orginal font size*/
+            color: #fff;
+            border-radius: 1rem;/*curve border*/
+            backdrop-filter: blur(16px);
+            max-width: 420px;
+            width: 90%;
+        }
+
+        .login__title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .login__inputs,.input__box {
+            row-gap: 1.28rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .input__box {
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            padding-inline: 1.25rem;/*left padding inside input box*/
+            border-radius: 4rem;/*border curve*/
+        }
+
+        .login__input,.login__button {
+            border: none;
+            outline: none;
+        }
+
+        .login__input {
+            color: white;
+            background: none;
+            padding-block: 1rem;/*padding inside input row*/
+        }
+        .login__input::placeholder {
+            color: #fff;
+        }
+        .login__button {
+            width: 100%;
+            padding: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            background-color: #fff;
+            border-radius: 4rem;
+            color: #000;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .login__register {
+            transition: all 0.3s ease 0s;
+            font-size: .813rem;
+            text-align: center;
+        }
+
+        .login__register a {
+            color: #fff;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <video class="login__bg" autoplay muted loop>
+            <source src="login.mp4" type="video/mp4">
+        </video>
+        <form action="loginback.php" class="login__form">
+            <h1 class="login__title">Login</h1>
+            <div class="login__inputs">
+                <div class="input__box">
+                    <input type="email" placeholder="Email ID" required class="login__input">
+                </div>
+                <div class="input__box">
+                    <input type="password" placeholder="Password" required class="login__input">
+                </div>
+            </div>
+			<input id="loginbtn" type="submit" class="login__button" value="Login">
+            <div class="login__register">
+                Don't have an account? <a href="Register.html">Register</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

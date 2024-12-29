@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Kerala</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            margin: 80px 0px 0px 110px;
+            transition: opacity 0.5s ease-out;
+        }
+        h3 {
+            font-size: 7rem;
+            color: white;
+            padding-top: 0.7rem;
+            margin: 0;
+            font-family: 'Bebas Neue', cursive;
+        }
+        #firsth {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+            color: white;
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+            line-height: 2;
+            color: white;
+            font-size: 19px;
+            margin-right: 50%;
+        }
+        .hbtn {
+            background: rgba(77, 255, 77, 0.7);
+            border: 1px solid transparent;
+            color: #fff;
+            padding-left: 40px;
+            padding-right: 37px;
+            border-radius: 50px;
+            line-height: 36px;
+            display: inline-block;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            position: relative;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .header {
+            font-family: 'Poppins', sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 25px;
+            text-align: right;
+        }
+        .hbtn:hover {
+            border: 1px solid white;
+            background-color: rgba(85, 85, 0, 0);
+            text-decoration: none;
+        }
+        a {
+            font-family: 'Poppins', sans-serif;
+            margin-right: 13px;
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="About.html"><b>About</b></a>
+        <a href="Feedback and Contact.html"><b>Feedback</b></a>
+    </header>
+    
+    <video autoplay muted loop>
+        <source src="login.mp4" type="video/mp4">
+    </video>
+    <span id="firsth">Welcome to</span>
+    <h3>Kerala</h3>
+    <div id="para">
+        <p>Kerala is a state located in the southwestern region of India, along the Malabar Coast. It is known for its beautiful beaches, ancient temples and palaces, and stunning natural landscapes, including lush forests, rolling mountains, and vibrant wildlife reserves.</p>
+        <a id="exploreBtn" class="hbtn" href="project.html">Explore Now</a>
+    </div>
+    <script>
+        document.getElementById('exploreBtn').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default action (navigation)
+            document.body.style.opacity = 0; // Fade out
+            setTimeout(function() {
+                window.location.href = 'project.html'; // Navigate to the new page
+            }, 650); // Wait for the transition to complete (0.5s)
+        });
+    </script>
+</body>
+</html>
